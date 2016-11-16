@@ -1,0 +1,14 @@
+{
+  "test_class_test_1 .py::test_question_1": true,
+  "test_class_test_1 .py::test_question_9": true,
+  "test_class_test_1.py::test_question_1": true,
+  "test_class_test_1.py::test_question_9": true,
+  "test_class_test_2.py::test_question_1": true,
+  "test_class_test_2.py::test_question_10": true,
+  "test_class_test_2.py::test_question_2": true,
+  "test_class_test_2.py::test_question_3": true,
+  "test_class_test_2.py::test_question_4": true,
+  "test_class_test_2.py::test_question_5": true,
+  "test_class_test_2.py::test_question_6": true,
+  "test_class_test_2.py::test_question_9": true
+}

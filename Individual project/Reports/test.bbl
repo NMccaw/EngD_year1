@@ -1,0 +1,42 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{lol}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ffbbbf56955c2d4fe00a3d4e5807902b}{%
+           family={Ekholm},
+           family_i={E\bibinitperiod},
+           given={Anders},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffbbbf56955c2d4fe00a3d4e5807902b}
+      \strng{fullhash}{ffbbbf56955c2d4fe00a3d4e5807902b}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Den ljusnande framtid är vård}
+      \field{year}{2010}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

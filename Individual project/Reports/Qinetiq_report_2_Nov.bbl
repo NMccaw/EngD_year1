@@ -1,0 +1,129 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Berger2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=aa4c0add6ab7e6d4738e16657ce4330c}{%
+           prefix={et},
+           prefix_i={e\bibinitperiod},
+           family={al},
+           family_i={a\bibinitperiod},
+           given={Berger},
+           given_i={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa4c0add6ab7e6d4738e16657ce4330c}
+      \strng{fullhash}{aa4c0add6ab7e6d4738e16657ce4330c}
+      \field{sortinit}{a}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Fourth International Symposium on Marine Propulsors}
+      \field{title}{Numerical Simulation of Propeller-Rudder Interaction for Cavitating and Non-Cavitating Flows Using Different Approaches}
+      \field{volume}{4}
+      \field{year}{2015}
+      \field{pages}{390\bibrangedash 402}
+      \range{pages}{13}
+    \endentry
+    \entry{Bonfiglio2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a5cffd7e22a275ae91155dd3bc7c4b99}{%
+           family={Luca\bibnamedelima Bonfiglio},
+           family_i={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Stefano\bibnamedelima Brizzolara},
+           given_i={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5cffd7e22a275ae91155dd3bc7c4b99}
+      \strng{fullhash}{a5cffd7e22a275ae91155dd3bc7c4b99}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Fourth International Symposium on Marine Propulsors}
+      \field{title}{Effect of turbulence models on RANSE predictions of transient flow over blade sections}
+      \field{volume}{4}
+      \field{year}{2015}
+      \field{pages}{68\bibrangedash 83}
+      \range{pages}{16}
+    \endentry
+    \entry{Maljaars2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=111b4ad2330bc0633e355469f04caba6}{%
+           family={Pieter\bibnamedelima Maljaars},
+           family_i={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Mirek\bibnamedelimb L.\bibnamedelimi Kaminski},
+           given_i={M\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{111b4ad2330bc0633e355469f04caba6}
+      \strng{fullhash}{111b4ad2330bc0633e355469f04caba6}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Fourth International Symposium on Marine Propulsors}
+      \field{title}{Hydro-elastic Analysis of Flexible Propellers: An Overview}
+      \field{volume}{4}
+      \field{year}{2015}
+      \field{pages}{146\bibrangedash 159}
+      \range{pages}{14}
+    \endentry
+    \entry{Politis2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b709cd79052266d76012b5f82fda188f}{%
+           family={Vasileios\bibnamedelima Tsarsitalidis},
+           family_i={V\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Gerasimos\bibnamedelima Politis},
+           given_i={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b709cd79052266d76012b5f82fda188f}
+      \strng{fullhash}{b709cd79052266d76012b5f82fda188f}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Fourth International Symposium on Marine Propulsors}
+      \field{title}{Simulating Biomimetic Propulsors under spring loading and/or active control for the pitching motion of the wings}
+      \field{volume}{4}
+      \field{year}{2015}
+      \field{pages}{99\bibrangedash 107}
+      \range{pages}{9}
+    \endentry
+    \entry{Young2006}{article}{}
+      \name{author}{1}{}{%
+        {{hash=80a691d40fa444103c41241675095a75}{%
+           family={Young},
+           family_i={Y\bibinitperiod},
+           given={Yin\bibnamedelima Lu},
+           given_i={Y\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{80a691d40fa444103c41241675095a75}
+      \strng{fullhash}{80a691d40fa444103c41241675095a75}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Propeller and Shafting Symposium}
+      \field{title}{Hydroelastic Responses of Composite Marine Propellers}
+      \field{year}{2006}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

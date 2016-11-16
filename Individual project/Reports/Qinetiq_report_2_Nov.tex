@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber]{biblatex}
+\bibliography{QinetiqreportNov}
+
+ 
+\title{A brief Summary of Year One of the Next Generation Computational Modelling}
+\author{Nicholas McCaw}
+\date{02/11/2016}
+
+\begin{document}
+
+
+
+\maketitle
+
+\section{Introduction}
+
+
+
+This report contains a brief overview of the 1st year of the Next Generation Computational Modelling (NGCM) and a summary of the research undertaken so far.
+\\
+
+\section{Taught Courses}
+
+\textbf{Year 1 of NGCM}
+
+The 1st year is similar to a taught Masters. It provides training in computational modelling methods such as programming, simulation methods, numerical techniques and high performance computing. 
+
+There are 6 core modules to be taken throughout the year:
+\begin{itemize}
+
+\item Simulation and Modelling (semester 1)
+
+\item Numerical Methods (semester 1)
+
+\item Advanced Computational Methods 1 (semester 1)
+
+\item Advanced Computational Methods 2 (semester 2)
+
+\item Statistics for Computational Modelling (semester 2)
+
+\item Professional and Research Skills (semester 1 and 2)
+\end{itemize}
+
+A course description for each is presented below.
+\\
+
+\textbf{Simulation and Modelling}
+
+Computational modelling can be used to tackle a wide range of science and engineering problems. A broad selection of methods have been produced that overlap different fields, allowing different aspects of the models to be solved. This module is a practical, hands-on introduction to a range of cutting-edge simulation techniques used in Computational Modelling. There are six techniques taught: Monte Carlo simulation, Molecular Dynamics, Density Functional Theory, Agent Based modelling, Finite Elements, Stochastic Differential Equations.
+\\
+
+\textbf{Numerical Methods}
+
+Introduces the practical application of a relatively wide spectrum of numerical techniques and familiarise the students with their implementation, using  python.
+This module is designed to cover four key areas: linear equations, quadratures (ie the evaluation of definite integrals) and the solution of Ordinary and Partial Differential Equations.
+\\
+
+\textbf{Advanced Computational Methods 1} 
+ 
+The module is focussed around advanced computational methods incorporating C and compiled languages, computational modelling and software engineering techniques for science and engineering.
+\\
+
+\textbf{Advanced Computational Methods 2} 
+
+The module provides an introduction to parallel programming as is widely used on supercomputers (OpenMP and MPI), combined with an introduction to tools and practices that underpin state-of-the-art computational modelling research and software engineering.
+\\
+
+\textbf{Statistics for Computational Modelling}
+
+This module will introduce important general aspects of statistical modelling and some fundamental aspects of data collection for computer and simulation experiments. A broad range of commonly-used statistical models will be encountered, and used to demonstrate both general principles and specific examples of modelling techniques in Python and R. A variety of exemplar applications and data sets will be presented.
+\\
+
+\textbf{Professional and Research Skills}
+
+This module provides you with a generic professional and research skills base to build upon during your studies. Study is divided into a number of complementary elements including, for example:"Technical Writing Skills", "Presenting Your Research", "Research Methodology for Scientists and Engineers" and "Ethics and Research Data Management". 
+\\
+
+\textbf{Summer Research Project}
+
+The aim of the summer project is to develop the students' skills for independent research, to expose them to the relevance of computational modelling to real-world problems, and to foster an understanding of constraints in non-academic environments.
+\\
+
+\section{Year One Research}
+
+The main objective of the 1st year research component is to learn aspects of propellers and the challenges in modelling. A research aim or question should be established by mid November. 
+
+The first part of my research is to look at the current state of the art in propulsion research. This is done by reading through the International Towing Tank Conference (ITTC) from 2014. The areas which require further research and development was established. The areas included:
+
+\begin{itemize}
+
+\item Model and full scale measurements of propulsors in off- design conditions.
+
+\item Full scale measurements of ship propulsive gain due to use of Energy saving devices.
+
+\item Propulsive performances on composite propeller at full scale and model scale with possible measurement of blade deformation and torque.
+
+\item Full scale measurements on hybrid contra-rotating shaft pod propulsors.
+
+\item CFD simulation on the effect of varying Reynolds number on the performance of blade sections.
+
+\item Full scale measurement of water jet inlet flow velocity fluids.
+\end{itemize}
+
+In a meeting with Professor Turnock I stated my interest in looking at deformable propellers. Professor Turnock informed me that this is an active research topic within the Fluid Structure Interaction (FSI) group at Southampton University. There is a simple 1 degree of freedom structural model developed as well as a simple blade element momentum theory performance model. The research interest would be to couple these two models. Further reading into J.Youngs work has been done and it was found that a Boundary Element Method (BEM) and a Finite Element Method(FEM) had been coupled \cite{Young2006}. The proposed research project would be less computationally expensive.
+\\
+It was also stated in the ITTC conference paper that energy saving devices were of high research interest. This was discussed with professor Turnock and it was decided that it is difficult to  accurately model the effect of the energy saving device without a good experience in dealing with CFD. Therefore this will not be perused this year.
+\\
+The proceedings of the 4th International Symposium on Marine Propulsors was briefly reviewed. The purpose of this review was to have an overview of the state of the art research and to find areas of interest for the year research project. The areas of interest include: Turbulence modelling \cite{Bonfiglio2015}, new propulsor technologies such as biomimetic propulsors \cite{Politis2015}, propeller rudder interaction \cite{Berger2015}. 
+\\
+Further to my interest in hydro-elastic properties there is an article giving an overview of the past research\cite{Maljaars2015}. This gave an overview of:
+\begin{itemize}
+\item Structural Modelling
+
+\item Hydrodynamic Modelling
+
+\item Fluid-Structure interaction
+
+\item Numerical Studies
+
+\item Experimental Studies
+\end{itemize}
+
+This makes this a great resource for future research.
+\\
+Finally it is planned to give an overview to the other useful sections of the ITTC such as the resistance committee, hydrodynamic noise and the CFD committee.
+\\
+\printbibliography 
+
+
+
+
+\end{document}
