@@ -1,0 +1,49 @@
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:8:8: warning: implicit declaration of function 'make_long_array' [-Wimplicit-function-declaration]
+fibb = make_long_array(n);
+       ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:10:5: error: subscripted value is not an array, pointer, or vector
+fibb[0] = 0;
+~~~~^~
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:11:5: error: subscripted value is not an array, pointer, or vector
+fibb[1] = 1;
+~~~~^~
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:12:5: error: use of undeclared identifier 'i'
+for(i=2;i<=n;i++){
+    ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:12:9: error: use of undeclared identifier 'i'
+for(i=2;i<=n;i++){
+        ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:12:14: error: use of undeclared identifier 'i'
+for(i=2;i<=n;i++){
+             ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:13:18: error: use of undeclared identifier 'i'
+  fibb[i] = fibb[i-1]+fibb[i-2]
+                 ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:13:8: error: use of undeclared identifier 'i'
+  fibb[i] = fibb[i-1]+fibb[i-2]
+       ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:13:28: error: use of undeclared identifier 'i'
+  fibb[i] = fibb[i-1]+fibb[i-2]
+                           ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:18:8: warning: incompatible integer to pointer conversion returning 'long' from a function with result type 'long *'; take the address with & [-Wint-conversion]
+return fibb
+       ^~~~
+       &
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:18:12: error: expected ';' after return statement
+return fibb
+           ^
+           ;
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:48:7: error: conflicting types for 'make_long_array'
+long* make_long_array(long n){
+      ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:8:8: note: previous implicit declaration is here
+fibb = make_long_array(n);
+       ^
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:58:14: error: expected ';' after expression
+free(pointer)
+             ^
+             ;
+/Users/Nicholas/Documents/EngD_year1/Ccodes2/lab7.c:63:9: warning: incompatible integer to pointer conversion initializing 'long *' with an expression of type 'int' [-Wint-conversion]
+  long *p = make_long_array(n);
+        ^   ~~~~~~~~~~~~~~~~~~
+3 warnings and 11 errors generated.

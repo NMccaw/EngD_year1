@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov 25 14:43:38 2016
+
+@author: Nicholas
+"""
+
+import numpy as np
+from scipy.optimize import fsolve
+import matplotlib
+from matplotlib import pyplot as plt
+
+
+def relaxation(f,bcs,N,alpha,beta):
+    
+    t,dt = np.linspace(0,1,N+2,retstep=True)
+    y_initial =np.zeros_like(t)
+    
+    
+
+    
+    def residual(y):
+        y[0] = bcs[0]
+        y[-1] = bcs[-1]
+        dydt = (y[2:]-y[:-2] / (2*dt))
+        print(len(dydt))
+        residual_i = np.zeros_like(y)
+        residual_i[1:-1] = (y[2:]-y[:-2] - 2*y[1:-1]- dt**2 * f(alpha,beta,t[1:-1],y[1:-1],dydt,dt,bcs))
+        return residual_i
+    
+    y = fsolve(residual, y_initial)
+        
+        
+
+    return y, t
+    
+def L_fun(alpha,beta,t,y,dydt,dt,bcs):
+    L = np.zeros_like(y)
+    L[0] = - bcs[0]
+    L [-1] = -bcs[1]
+    print(len(y))
+    L[1:-1] = alpha * dydt[1:-1]**2 +beta*(t[1:-1]**2 -1) * dydt[1:-1]**3 - y[1:-1]
+    
+    return L
+    
+def dLdy_fun(alpha,beta,t,y,dydt,dt,bcs):
+    L = L_fun(alpha,beta,t,y,dydt,dt,bcs)
+    print('L = ',len(L))
+    dy = y[2:] - y[:-2]
+    dLdy = L[2:]-L[:-2]/ 2*dt
+    return dLdy
+
+def dydt_fun(alpha,beta,t,y,dt,bcs): 
+    
+    dydt = y[2:]-y[:-2]/ 2*dt
+    return dydt
+
+def d2Ldydy_fun(alpha,beta,t,y,dydt,dt,bcs):
+    L = L_fun(alpha,beta,t,y,dydt,dt,bcs)
+    dy = y[2:] - y[:-2]
+    d2Ldydy = L[2:]-L[:-2] - 2*L[1:-1]/ dt**2
+    return d2Ldydy
+
+def d2Ldtdydot_fun(alpha,beta,t,y,dydt,dt,bcs):
+    L = L_fun(alpha,beta,t,y,dydt,dt,bcs)
+    #dydt = dydt_fun(alpha,beta,t,y,dydt,dt)
+    
+    d2Ldtdydot = (L[2:] + L[:-2] - 2*L[1:-1]) / (dt*dt)
+    return d2Ldtdydot
+    
+def d2Ldydotdy_fun(alpha,beta,t,y,dydt,dt,bcs):
+    L = L_fun(alpha,beta,t,y,dydt,dt,bcs)
+    dy = y[2:] - y[:-2] 
+    #dydt = dydt_fun(alpha,beta,t,y,dydt,dt)    
+    d2Ldydotdy = (L[2:] + L[:-2] - 2*L[1:-1]) / (dt*dt)
+    return d2Ldydotdy
+
+    
+def f(alpha,beta,t,y,dydt,dt,bcs):
+    #dydt = dydt_fun(alpha,beta,t,y,dt)
+    dLdy = dLdy_fun(alpha,beta,t,y,dydt,dt,bcs)
+    d2Ldydy = d2Ldydy_fun(alpha,beta,t,y,dydt,dt,bcs)
+    d2Ldtdydot = d2Ldtdydot_fun(alpha,beta,t,y,dydt,dt,bcs)
+    d2Ldydotdy = d2Ldydotdy_fun(alpha,beta,t,y,dydt,dt,bcs)
+   
+    
+    return (dLdy - (dydt*d2Ldydy) - d2Ldtdydot) / d2Ldydotdy
+    

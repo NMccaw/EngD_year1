@@ -1,0 +1,334 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.24)  20 MAR 2017 17:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Report-first-draft.tex
+(./Report-first-draft.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 96.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(./Report-first-draft.aux)
+\openout1 = `Report-first-draft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen106
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks16
+) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
+
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[1]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
+
+ []
+
+[1
+
+]
+Chapter 2.
+[2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 67.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 67.
+
+Overfull \hbox (3.05612pt too wide) in paragraph at lines 64--70
+[]\OT1/cmr/m/n/10 This sub-section will de-scribe the tu-to-ri-als un-der-taken
+ us-ing Open-FOAM.The
+ []
+
+[3] <cavity_pressure.png, id=24, 333.245pt x 385.44pt>
+File: cavity_pressure.png Graphic file (type png)
+
+<use cavity_pressure.png>
+Package pdftex.def Info: cavity_pressure.png used on input line 85.
+(pdftex.def)             Requested size: 166.62209pt x 192.71953pt.
+ [4 <./cavity_pressure.png>]
+<cavity_vector.png, id=31, 329.23pt x 376.40625pt>
+File: cavity_vector.png Graphic file (type png)
+ <use cavity_vector.png>
+Package pdftex.def Info: cavity_vector.png used on input line 94.
+(pdftex.def)             Requested size: 164.6146pt x 188.20265pt.
+
+<cavity_fine.png, id=32, 494.84875pt x 424.58624pt>
+File: cavity_fine.png Graphic file (type png)
+ <use cavity_fine.png>
+Package pdftex.def Info: cavity_fine.png used on input line 103.
+(pdftex.def)             Requested size: 192.99023pt x 165.58797pt.
+
+[5 <./cavity_vector.png> <./cavity_fine.png>]
+<Graded_mesh.png, id=39, 461.725pt x 392.46625pt>
+File: Graded_mesh.png Graphic file (type png)
+ <use Graded_mesh.png>
+Package pdftex.def Info: Graded_mesh.png used on input line 120.
+(pdftex.def)             Requested size: 230.86194pt x 196.23264pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--136
+
+ []
+
+[6 <./Graded_mesh.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+<stress_geometry.png, id=44, 732.7375pt x 444.66125pt>
+File: stress_geometry.png Graphic file (type png)
+
+<use stress_geometry.png>
+Package pdftex.def Info: stress_geometry.png used on input line 143.
+(pdftex.def)             Requested size: 366.36786pt x 222.33008pt.
+
+Overfull \hbox (21.36786pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
+<stress_blocks.png, id=45, 584.1825pt x 537.00626pt>
+File: stress_blocks.png Graphic file (type png)
+ <use stress_blocks.png>
+Package pdftex.def Info: stress_blocks.png used on input line 154.
+(pdftex.def)             Requested size: 172.5pt x 158.57115pt.
+
+<stress_mesh.png, id=46, 365.365pt x 345.29pt>
+File: stress_mesh.png Graphic file (type png)
+ <use stress_mesh.png>
+Package pdftex.def Info: stress_mesh.png used on input line 160.
+(pdftex.def)             Requested size: 172.5pt x 163.02393pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 152--164
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<stress_field.png, id=47, 486.81876pt x 347.2975pt>
+File: stress_field.png Graphic file (type png)
+ <use stress_field.png>
+Package pdftex.def Info: stress_field.png used on input line 174.
+(pdftex.def)             Requested size: 243.40878pt x 173.64832pt.
+
+[7 <./stress_geometry.png>]
+<stress_analytical.png, id=53, 600.2425pt x 360.34625pt>
+File: stress_analytical.png Graphic file (type png)
+
+<use stress_analytical.png>
+Package pdftex.def Info: stress_analytical.png used on input line 186.
+(pdftex.def)             Requested size: 300.12051pt x 180.17268pt.
+ [8 <./stress_blocks.png> <./stress_mesh.png>]
+[9 <./stress_field.png> <./stress_analytical.png>]
+Chapter 3.
+<Momentum_theory.png, id=64, 258.9675pt x 122.4575pt>
+File: Momentum_theory.png Graphic file (type png)
+
+<use Momentum_theory.png>
+Package pdftex.def Info: Momentum_theory.png used on input line 204.
+(pdftex.def)             Requested size: 129.48341pt x 61.22859pt.
+ [10
+
+ <./Momentum_theory.png>]
+<blade_element.png, id=69, 464.73625pt x 188.705pt>
+File: blade_element.png Graphic file (type png)
+ <use blade_element.png>
+Package pdftex.def Info: blade_element.png used on input line 265.
+(pdftex.def)             Requested size: 232.36755pt x 94.35226pt.
+
+[11] <BEMT_flow_diagram.png, id=76, 494.84875pt x 638.385pt>
+File: BEMT_flow_diagram.png Graphic file (type png)
+
+<use BEMT_flow_diagram.png>
+Package pdftex.def Info: BEMT_flow_diagram.png used on input line 300.
+(pdftex.def)             Requested size: 247.42377pt x 319.19171pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./blade_element.png>]
+<curvature_correction_curves.png, id=82, 510.90875pt x 367.3725pt>
+File: curvature_correction_curves.png Graphic file (type png)
+
+<use curvature_correction_curves.png>
+Package pdftex.def Info: curvature_correction_curves.png used on input line 315
+.
+(pdftex.def)             Requested size: 255.45375pt x 183.68579pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13 <./BEMT_flow_diagram.png>]
+<forces_on_beam.png, id=88, 240.9pt x 118.4425pt>
+File: forces_on_beam.png Graphic file (type png)
+ <use forces_on_beam.png>
+Package pdftex.def Info: forces_on_beam.png used on input line 328.
+(pdftex.def)             Requested size: 180.67455pt x 88.83165pt.
+
+[14 <./curvature_correction_curves.png> <./forces_on_beam.png>]
+<curvature.png, id=94, 177.66376pt x 166.6225pt>
+File: curvature.png Graphic file (type png)
+ <use curvature.png>
+Package pdftex.def Info: curvature.png used on input line 378.
+(pdftex.def)             Requested size: 88.83165pt x 83.31104pt.
+ [15 <./curvature.png>] [16] (./Report-first-draft.aux) ) 
+Here is how much of TeX's memory you used:
+ 1624 strings out of 493014
+ 24244 string characters out of 6133350
+ 84282 words of memory out of 5000000
+ 5161 multiletter control sequences out of 15000+600000
+ 8808 words of font info for 31 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,7n,23p,911b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Report-first-draft.pdf (18 pages, 897771 bytes).
+PDF statistics:
+ 149 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+

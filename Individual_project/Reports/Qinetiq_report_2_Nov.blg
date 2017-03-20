@@ -1,0 +1,5 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'Qinetiq_report_2_Nov.blg'
+[48] biber-darwin:290> INFO - === Thu Feb 23, 2017, 11:05:22
+[70] Biber.pm:351> INFO - Reading 'Qinetiq_report_2_Nov.bcf'
+[183] Utils.pm:149> WARN - No data sources defined!

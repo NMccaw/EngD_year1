@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 28 17:17:45 2016
+
+@author: Nicholas
+"""
+
+import numpy as np
+import scipy
+from scipy.integrate import odeint
+from scipy.optimize import newton
+import matplotlib
+from matplotlib import pyplot as plt
+
+def shooting(z,t,alpha,beta,h,dt):
+      
+    return odeint(f,[1,z],t,args = (alpha,beta,h,dt))
+
+def phi(z,alpha,beta,h,dt):
+    y = shooting(z,[0,1],alpha,beta,h,dt)
+    y_boundary = 0.9
+    return y[-1,0] - y_boundary
+    
+
+    
+def L_fun(t,q,alpha,beta,h,y):
+    
+    L = alpha * q[1]**2 +beta*(t**2 -1) * q[1]**3 - y
+    
+    return L
+    
+
+def dLdy_fun(q,t,alpha,beta,h,y):
+    
+    
+    dLdy = L_fun(t,q,alpha,beta,h,y+h) - L_fun(t,q,alpha,beta,h,y-h) / 2*h
+    
+    return dLdy
+   
+    
+def d2Ldydy_fun(q,t,alpha,beta,h,y):
+    
+    d2Ldydy = L_fun(t,q,alpha,beta,h,y+h) + L_fun(t,q,alpha,beta,h,y-h) - 2*L_fun(t,q,alpha,beta,h,y) / h**2
+
+    return d2Ldydy
+
+def d2Ldtdq_fun(q,t,alpha,beta,h,y,dt):  
+    
+    return dLdq_fun(t+dt,q,alpha,beta,h,y)-dLdq_fun(t-dt,q,alpha,beta,h,y)/2*dt
+    
+def dLdq_fun(t,q,alpha,beta,h,y):
+    return L_fun(t,q,alpha,beta,h,y+h) - L_fun(t,q,alpha,beta,h,y-h) / 2*h
+    
+def d2Ldqdq_fun(q,t,alpha,beta,h,y):
+    
+    
+    return dLdq_fun(t+dt,q,alpha,beta,h,y+h)-dLdq_fun(t,q,alpha,beta,h,y-h)/2*h
+    
+    
+    
+def f(q,t,alpha,beta,h,dt):
+    y = -t**2
+    
+    
+    dqdt = np.zeros_like(q)
+    dqdt[0] = q[1]  
+    dLdy1  = dLdy_fun(q,t,alpha,beta,h,y)
+    
+    d2Ldydy = d2Ldydy_fun(q,t,alpha,beta,h,y)
+    d2Ldtdq = d2Ldtdq_fun(q,t,alpha,beta,h,y,dt)
+    d2Ldqdq = d2Ldqdq_fun(q,t,alpha,beta,h,y)
+    
+    dqdt[1] = (dLdy1 - q[1]* d2Ldydy - d2Ldtdq) / d2Ldqdq
+    return dqdt
+    
+if __name__ == '__main__':
+    alpha = 5
+    beta = 5
+    h =1e-4
+    t, dt = np.linspace(0,1,retstep = True)
+    z_true = newton(phi,0.1,args = (alpha,beta,h,dt))
+    y =shooting(z_true,t,alpha,beta,h,dt)
+    plt.plot(t,y[:,0])
+    

@@ -1,0 +1,13 @@
+ load naca2412.dat
+                           OPER 
+                            visc 500000
+                            pacc 
+KH40( Modified
+                            
+                            iter 
+ 10000
+                            aseq 
+                             -2
+                            2
+                            0.1
+                            quit

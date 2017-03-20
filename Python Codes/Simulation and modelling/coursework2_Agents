@@ -1,0 +1,212 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 21 09:01:33 2016
+
+@author: Nicholas
+"""
+
+import numpy 
+import scipy
+from scipy.optimize import minimize_scalar
+from matplotlib import pyplot, animation
+from IPython.core.display import HTML
+
+class Agent(object):
+    
+    def __init__(self, location, velocity, C, A=5, S=0.25):
+        self.location = numpy.array(location)
+        self.velocity = numpy.array(velocity)
+        self.cost = lambda theta, theta_z, theta_V, theta_zmin, dzmin : \
+            -(C * numpy.cos(theta - theta_z) + A * numpy.cos(theta - theta_V) - \
+            S * numpy.cos(theta - theta_zmin) / dzmin**2)
+        
+    def step(self, dt):
+        self.location += dt * self.velocity
+        
+    def steer(self, neighbours):
+        N = len(neighbours)
+        if N:
+            flock_locations = numpy.zeros((N,2))
+            flock_velocities = numpy.zeros((N,2))
+            for i in range(N):
+                flock_locations[i,:] = neighbours[i].location
+                flock_velocities[i,:] = neighbours[i].velocity
+            # Average properties
+            z = numpy.mean(flock_locations, axis=0)
+            V = numpy.mean(flock_velocities, axis=0)
+            # Direction to average location
+            dz = z - self.location
+            theta_z = numpy.arctan2(dz[1], dz[0])
+            # Direction of average velocity
+            theta_V = numpy.arctan2(V[1], V[0])
+            # Separation to all other boids
+            dz = flock_locations - self.location
+            # Closest neighbour
+            zmin_i = numpy.argmin(numpy.linalg.norm(dz, 2, axis=1))
+            # Separation and angle
+            dzmin = numpy.linalg.norm(dz[zmin_i, :], 2)
+            theta_zmin = numpy.arctan2(dz[zmin_i, 1], dz[zmin_i, 0])
+
+            theta_min = minimize_scalar(self.cost, bracket = (-1.5*numpy.pi, 1.5*numpy.pi), 
+                                        args=(theta_z, theta_V, theta_zmin, dzmin))
+            theta = theta_min.x
+            speed = numpy.linalg.norm(self.velocity, 2)
+            self.velocity[0] = speed * numpy.cos(theta)
+            
+            self.velocity[1] = speed * numpy.sin(theta)
+            
+from copy import deepcopy
+
+class Flock(object):
+    def __init__(self, locations, velocities, C, rl=1):
+        
+        self.locs = numpy.array(locations)
+        self.vels = numpy.array(velocities)
+        self.C = C
+        self.rl = rl
+        self.agents = []
+        for location, velocity in zip(locations, velocities):
+            self.agents.append(Agent(location, velocity, C))
+    
+    def step(self, dt):
+        current_agents = []
+        for agent in self.agents:
+            current_agents.append(deepcopy(agent))
+        for i, agent in enumerate(self.agents):
+            neighbours = []
+            for j, other_agent in enumerate(current_agents):
+                if i != j:
+                    separation = agent.location - other_agent.location
+                    distance = numpy.linalg.norm(separation, 2)
+                    if (distance < self.rl):
+                        neighbours.append(other_agent)
+            agent.steer(neighbours)
+            agent.step(dt)
+    
+    def locations(self):
+        for i, agent in enumerate(self.agents):
+            self.locs[i,:] = agent.location
+        return self.locs
+    
+    def velocities(self):
+        for i, agent in enumerate(self.agents):
+            self.vels[i,:] = agent.velocity
+        return self.vels
+    
+    def average_location(self):
+        locations = self.locations()
+        return numpy.mean(locations, axis=0)
+    
+    def average_velocity(self):
+        velocities = self.velocities()
+        return numpy.mean(velocities, axis=0)
+    
+    def average_width(self):
+        locations = self.locations()
+        average_location = self.average_location()
+        separations = numpy.abs(locations-average_location)
+        width = numpy.mean(numpy.linalg.norm(separations, 2, axis=1))
+        return width
+        
+
+        
+def training(C):
+    locations = numpy.array([[0.25,0.25],[0.25,0.75],[0.75,0.75],[0.75,0.25]])
+    velocities = numpy.array([[1.,1.],[1.,1.],[1.,1.],[1.,1.]])
+    
+    flock = Flock(locations,velocities,C)
+    dt = 0.1
+    
+    steps = round(5/dt)
+    
+    width_series = numpy.zeros(steps)
+    for t in range(steps):
+               
+        
+        flock.step(dt)
+        
+        width_series[t] = flock.average_width()
+   
+        
+    width_var = numpy.var(width_series)
+    
+    
+    
+    return width_var
+
+
+
+
+optimum = scipy.optimize.minimize_scalar(training,bounds=[0.1,10])
+optimumC = optimum.x
+    
+
+def flock_animation(flock, dt, frames=10, xlim=(-0.1, 5), ylim=(-0.1, 5)):
+    # First evolve
+    
+    locations = [deepcopy(flock.locations())]
+    ave_width = [flock.average_width()]
+    ave_loc = [flock.average_location()]
+    ave_vel = [flock.average_velocity()]
+    times = numpy.arange(0.0, frames*dt, dt)
+    for i in range(frames):
+        flock.step(dt)
+        locations.append(deepcopy(flock.locations()))
+        ave_width.append(flock.average_width())
+        ave_loc.append(flock.average_location())
+        ave_vel.append(flock.average_velocity())
+        
+    max_width = max(ave_width)
+    min_width = min(ave_width)
+    d_width = max_width - min_width
+    
+    fig = pyplot.figure()
+    ax1 = fig.add_subplot(131)
+    ax1.set_xlim(xlim[0], xlim[1])
+    ax1.set_ylim(ylim[0], ylim[1])
+    points, = ax1.plot([], [], 'ro')
+    ax1.set_xlabel("$x$")
+    ax1.set_ylabel("$y$")
+    ax2 = fig.add_subplot(132)
+    width, = ax2.plot([], [], 'b-')
+    ax2.set_xlabel("$t$")
+    ax2.set_ylabel("Average width of flock")
+    ax2.set_xlim(0.0, dt*frames)
+    ax2.set_ylim(min_width-0.1*d_width, max_width+0.1*d_width)
+    ax3 = fig.add_subplot(133)
+    loc, = ax3.plot([], [], 'bo', label='Location')
+    vel, = ax3.plot([], [], 'r*', label='Heading')
+    ax3.set_xlabel("$x$")
+    ax3.set_ylabel("$y$")
+    ax3.set_xlim(xlim[0], xlim[1])
+    ax3.set_ylim(ylim[0], ylim[1])
+    ax3.legend()
+    fig.tight_layout()
+    pyplot.close()
+
+    def init():
+        points.set_data([], [])
+        width.set_data([], [])
+        loc.set_data([], [])
+        vel.set_data([], [])
+        return (points, width, loc, vel)
+
+    def animate(i):
+        points.set_data(locations[i][:,0], locations[i][:,1])
+        width.set_data(times[:i+1], ave_width[:i+1])
+        loc.set_data([ave_loc[i][0]], [ave_loc[i][1]])
+        vel.set_data([ave_vel[i][0]], [ave_vel[i][1]])
+        return (points, width, loc, vel)
+
+    return animation.FuncAnimation(fig, animate, init_func=init, interval=100, frames=frames, blit=True)    
+        
+def large_flock():     
+    nbirds = 50
+    locations = 5.0*numpy.random.rand(nbirds,2)
+    velocities = numpy.ones_like(locations) + 0.01*numpy.random.rand(nbirds,2)
+    flock = Flock(locations, velocities, C = optimumC)   
+    
+    HTML(flock_animation(flock, 0.1, 50, xlim=(-20.0,20.0), ylim=(-20.0,20)).to_html5_video())
+    
+    

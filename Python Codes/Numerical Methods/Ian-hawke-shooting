@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 29 09:35:33 2016
+
+@author: Nicholas
+"""
+import scipy
+from scipy.integrate import odeint
+
+
+def f(q,x):
+    
+    dqdx = np.zeros_like(q)
+    dqdx[0] = q[1]
+    dqdx[1]= -1 -q[1]
+    return dqdx
+    
+def compute_soln(z,x):
+    return odeint(f,[0,z],x)
+    
+
+x = np.linspace(0,1)
+soln = compute_soln(2.5,x)

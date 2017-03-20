@@ -1,0 +1,18 @@
+  Prop: KP458 for KVLCC and KVLCC2
+  Number of Blade: 4
+  Section Profile: KH40( Modified NACA66 + a=0.8 mean line Camber)
+      (note) Details of KH40 section can not be disclosed.
+             However, it can be replaced by NACA66 section for CFD purpose.
+  Scale ratio: 58.0
+  Propeller Diameter: 1.25 m
+  Hub Ratio: 0.2
+
+ r/R      P/D       Rake     Skew(¡£)     C/D       fo/C       to/D 
+0.200   0.843600   0.0000     -4.000   0.166400   0.000000   0.036585   
+0.300   0.957500   0.0000     -4.400   0.192800   0.000000   0.032378   
+0.400   1.002250   0.0000     -4.400   0.210400   0.000000   0.028170   
+0.500   1.007000   0.0000     -3.150   0.220800   0.000000   0.023963   
+0.600   0.987050   0.0000     -0.820   0.223200   0.000000   0.019755   
+0.700   0.950000   0.0000      2.490   0.215200   0.000000   0.015545   
+0.800   0.900600   0.0000      6.350   0.192800   0.000000   0.011340   
+0.900   0.843600   0.0000     10.760   0.147200   0.000000   0.007135

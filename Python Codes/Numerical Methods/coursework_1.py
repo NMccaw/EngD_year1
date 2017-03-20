@@ -350,6 +350,9 @@ def task4():
     
             err_GRRK[j] = dt*np.sum(np.abs(q_series_imp[:,1]- exact_y))
             assert type(err_GRRK[j])==np.float or np.float64,'error is not of type np.float'
+            
+            
+
     assert len(err_RK)==8, 'There are not enough error values'
     assert len(err_GRRK)==8, 'There are not enough error values'
     

@@ -1,0 +1,97 @@
+Emacs Tutorial
+
+This is the Emacs navigation tutorial
+
+C-f to move forward by character
+C-b to move back by character
+C-p to go back one line
+C-n to go to next line
+
+
+M-f move forward by word
+M-b move back by word
+
+C-a/e move to start/end of line
+
+C/M-v page up/down
+
+and now...WonderWall 
+
+Today is gonna be the day
+That they're gonna throw it back to you
+By now you should've somehow
+Realized what you gotta do
+I don't believe that anybody
+Feels the way I do, about you now
+
+Back beat, the word was on the street
+That the fire in your heart is out
+I'm sure you've heard it all before
+But you never really had a doubt
+I don't believe that anybody
+Feels the way I do about you now
+
+And all the roads we have to walk are winding
+And all the lights that lead us there are blinding
+There are many things that I
+Would like to say to you but I don't know how
+
+Because maybe, you're gonna be the one that saves me
+And after all, you're my wonderwall
+
+Today was gonna be the day
+But they'll never throw it back to you
+By now you should've somehow
+Realized what you're not to do
+I don't believe that anybody
+Feels the way I do, about you now
+
+And all the roads that lead you there are winding
+And all the lights that light the way are blinding
+There are many things that I
+Would like to say to you but I don't know how
+
+I said maybe, you're gonna be the one that saves me
+And after all, you're my wonderwall
+
+I said maybe, you're gonna be the one that saves me
+And after all, you're my wonderwall
+
+I said maybe, you're gonna be the one that saves me
+You're gonna be the one that saves me
+You're gonna be the one that saves me
+
+
+C-x C-s to save
+
+C-x C-w to write to a file (sace as)
+
+C-x u to undo
+
+C-s to search. Searches forward
+
+C-r to search. Searches backwards
+
+C-r/s to go to next search result (wording)
+
+M-x goto-line to go to a specific line
+
+C-space to set mark. Move using arrow keys or keys described on lines 5 - 12
+
+C/M-w cut/copy as the selected section
+
+C-y to paste (yank, Jim is a yanker)
+
+C-x i to insert another file
+
+C-x 4 b <name>  open another buffer called 'name' in another window
+
+C-x 5 b <name> open another buffer called 'name' in another frame
+
+C-x C-b to list existing buffers
+
+C-x o to move between windows
+
+C-x 0 to delete window
+
+M- </> go to start/end of buffer
