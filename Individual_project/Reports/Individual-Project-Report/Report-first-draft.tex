@@ -1,7 +1,8 @@
 \documentclass[]{report}
 \usepackage{graphicx}
-
-
+\usepackage{mathtools}
+\usepackage{listings}
+\lstset{language = Python, numbers = left, stepnumber = 1}
 % Title Page
 \title{Using Blade Element Momentum Theory for Propeller Analysis}
 \author{Nicholas McCaw}
@@ -412,15 +413,165 @@ The stress $\sigma$ and strain $\epsilon$ can now be introduced. The displacemen
  
   
  \begin{equation}
- \pi = \frac{1}{2} E I  \int_{0}^{L} {\theta '}^2 dx + \frac{1}{2} \kappa G A  \int_{0}^{L} (-\theta + w')^2  dx  -  \int_{0}^{L} w v dx
+ \pi = \frac{1}{2} E I  \int_{0}^{L} {\theta '}^2 dx + \frac{1}{2} \kappa G A  \int_{0}^{L} (-\theta + v')^2  dx  -  \int_{0}^{L} w v dx
  \label{eq:potential_energy_beam_sub}
  \end{equation}
  
  and the change in potential energy is:
   \begin{equation}
- \delta \pi =  E I  \int_{0}^{L} {\theta '}^2 dx + \frac{1}{2} \kappa G A  \int_{0}^{L} (-\theta + w')^2  dx  -  \int_{0}^{L} w v dx = 0
- \label{eq:potential_energy_beam_sub}
+ \delta \pi =  E I  \int_{0}^{L} \frac{d{\theta}}{dx} \frac{d\delta {\theta}}{dx}dx +  \kappa G A  \int_{0}^{L} (-\theta + \frac{dv}{dx})(\delta \theta - \frac{d \delta v}{dx})  dx  -  \int_{0}^{L} w \delta v dx = 0
+ \label{eq:change_in_potential_energy_beam_sub}
  \end{equation}
  
+ We now have a system of equations of the form:
+ \begin{equation}
+ [K]\vec{u} = \vec{F}
+ \end{equation}
+ Where $K$ is the stiffness matrix, $\vec{u}$ is the displacement vector and $\vec{F}$ is the force vector. There is now a system of equations which describe the beam deformation for a given load. However not all terms in equation \ref{eq:change_in_potential_energy_beam_sub} are known. Approximations must be made for the interpolation of bending $v$ and twist $\theta$. This is done using shape functions. This process is described in section \ref{sec:FEA}.
  
- \end{document}          
+ \subsection{Finite Element Analysis}
+ \label{sec:FEA}
+ 
+ Finite element analysis is used to obtain an approximation to properties of structures. The domain is split into many intervals or elements. The governing equation of the property is known however there are terms in the equation which are unknown. These terms are represented using shape functions such that:
+
+ \begin{equation}	
+	 \begin{aligned}
+	 v = \sum_{a} N^a v^a \hspace{5mm}  \theta = \sum_{a} N^a \theta^a \\
+	  \delta v = \sum_{b} N^b \delta v^a \hspace{5mm}  \delta \theta = \sum_{b} N^b \delta \theta^b  
+	  \end{aligned}
+	  \label{bend_twist shape functions}
+ \end{equation} 
+The shape functions are chosen such that $N^a = 1$ at the associated node and $N^a = 0$ at all other nodes. For simplicity the shape functions have been chosen to be linear. For this case the shape functions are:
+
+\begin{equation}
+N^a = 0.5(1-x_i)
+\hspace{5mm}	
+N^b = 0.5(1+x_i)
+\label{eq:shape functions}
+\end{equation}
+Where $x_i$ is the local coordinate. From convention $x_i$ is in the interval $[-1,1]$. Equations \ref{bend_twist shape functions} can now be substituted into equation \ref{eq:change_in_potential_energy_beam_sub} to give:
+
+\begin{equation}
+\left \{ E I \int_{0}^{L} \frac{d{N^a }}{dx} \frac{d N^b }{dx}dx \right \} w^a  + \left \{ \ - \kappa G A \int_{0}^{L} N^a \frac{d N^b }{dx}dx \right \} \theta^a = \int_{0}^{L} w N^b dx
+\label{eq:shape func governing equ}
+\end{equation}
+
+This generates the local stiffness matrix and force vector. The local values must then be mapped on to the global stiffness matrix and global force vector. This is relatively simple for a 1D beam.
+
+Equation \ref{eq:shape func governing equ} is now in a form which is solvable via $\vec{u} = \vec{F} [K]^{-1} $. This is done by the code described in section (CODE SECTION HERE)
+
+\chapter{The Code}
+This chapter will describe the code used for the blade element momentum theory and finite element analysis. Furthermore the chapter will describe how the BEMT and FEA are coupled. Full code can be found in appendix (INSERT APPENDIX REF)
+
+\section{Blade Element momentum theory code}
+The blade element momentum theory code uses the same algorithm as described in figure \ref{fig:blade_element_flow_diagram}. However there are portions which require user input. This section will describe the code and the required user input.
+
+The 1st part of the user needs to interact is the initializing data
+
+\begin{lstlisting}[language = Python]
+if __name__ == '__main__':
+	Re = 500000 # Reynolds Number
+	foil_filename = 'naca2412.dat'
+	prop_data_file = 'propgeom.txt'
+	P_D = 1.2     # Pitch/Diamter Ratio
+	BA_ratio = 0.95 #  Blade Area Ratio
+	N_blades = 3    # number of blades
+	xfoil_flag = 0 # use xfoil for Cl and Cd approximations 1 yes, 0 no
+	rho = 1029 # density of seawater
+	n = 10 # rotations per sec
+	Va = 10 # prop inflow velocity
+	chord, x_R_list, local_P_D, chord_diameter, thickness_distibution,MC,filename \\
+	 ,D = generate_foil_data(prop_data_file)
+	J = Va/(n*D)   #Advance Ratio
+	E = 5e6 # Elastic Modulus
+	nu = 0.3 # Poissons Ratio
+	kappa = 5/6 
+	h = 2 
+\end{lstlisting}
+
+Here the basic conditions are defined such as Reynolds number, Elastic modulus and Poissons ratio. Furthermore on line 3 the foil filename is defined. This is the data file defining the foil coordinates. This file is used only if Xfoil is being used to generate the foils lift and drag curves. The option to use Xfoil is specified in line 8, if 1 is selected the Xfoil will be used, if 0 is selected then the lift and drag curves will be defined by a data from a lookup table. \
+The propeller data file is defined in line 4. An example of this data file is shown in figure \ref{fig:prop dat file}. This file gives information on the number of blades, section profile,and propeller diameter. The radial positions to be analysed are given as well as: the pitch, chord, camber and thickness at these positions. All this data is stored and used in blade element momentum theory. 
+\\
+Once the blade parameters have been defined the blade element momentum theory is then called.
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{prop_data_file_example}
+	\caption{Example of a propeller data file}
+	\label{fig:prop dat file}
+\end{figure}
+Firstly the angle of attack is set to 0 for the 1st blade element.
+
+\begin{lstlisting}[language = Python]
+alpha[i] = 0.0
+# set number of alpha iterations to 0
+alpha_iterations = 0
+# set convergence flag to 0
+alpha_converge = 0
+# start of alpha convergenc loop
+while alpha_iterations < 2000 and alpha_converge == 0: 
+	alpha_iterations += 1
+	# calculate tan of inflow angle
+	tan_psi[i] = J / (np.pi*x_R)
+	# induced flow angle plus angle of attack
+	phi_plus_alhpa[i] = np.arctan2(local_P_D[i],(np.pi*x_R))
+	# inflow angle
+	phi[i] = phi_plus_alhpa[i] - alpha[i]
+	# ideal efficieny
+	eta_ideal = tan_psi[i] / np.tan(phi[i])
+	# initially set efficiency to ideal  
+	eta  = 0.9 * eta_ideal
+	gamma = 0.0 # zero for ideal efficiency
+\end{lstlisting}
+The alpha loop then begins. Firstly the inflow angle is calculated from the advance ratio. Then the induced flow angle plus angle of attack is computed from the local pitch (line 12). The angle of attack is then subtracted from this to compute the induced flow angle. The ideal efficiency is then calculated from the inflow angle and induced flow angle and the actual efficiency is set to 90\% of the ideal efficiency.
+\\
+The efficiency loop now begins.
+\begin{lstlisting}
+while eta_iterations < 2000 and eta_converge == 0:
+	# axial inflow factor
+	a = (1 - eta_ideal)/(eta_ideal + (tan_psi[i]**2)/eta)
+	# local thrust coefficient
+	KT_dx[i] = np.pi*(J**2) * x_R * K * a*(1+a)
+	# circumferential inflow factor (a')
+	a_p =1-eta_ideal*(1+a)
+\end{lstlisting}
+Firstly the axial and circumferential inflow factors are computed as shown in lines 3 and 7. The thrust coefficient is also computed. The lift and drag coefficients are then computed. This is done using a table either produced by Xfoil or using the look up table. The table has values for lift and drag coefficient for many angles of attack. If the angle of attack of the blade section does not lie on a defined value simple linear interpolation is used. A new $\gamma$ angle is calculated from the lift and drag coefficients. From the new $\gamma$ the efficiency is computed. This efficiency loop is then repeated until $\eta_{old} = \eta_{new}$ within a small tolerance.
+\\
+Once the efficiency has converged the curvature correction is applied. This involves generating correct coefficients $k_1$ and $k_2$ using the graph shown on figure \ref{fig:curvature_correction_curves}. The rate of change of lift coefficient to camber is assumed to be 12 (TURNOCK). The camber deficit is then computed by subtracting the required camber at $\alpha = 0$ from the actual camber. This is then multiplied by the assumed lift coefficient camber slope and divided by the lift curve slope to produce the new angle of attack. This process is repeated until the angle of attack converges on a single value. 
+\ 
+When the angle of attack converges the torque coefficient is calculated as is the velocity of the fluid into the blade element. The entire process is repeated for the next blade element. 
+\\
+Once the process is complete over all blade elements the total thrust and torque coefficients are computed by integrating the thrust and torque over all elements using Simpsons rule. The results of this process are shown in chapter \ref{ch:Results and Discussion}.
+
+\section{Finite Element Analysis Code}
+The model of the blade for structural purposes is that of a simple 1D timoshenko beam. This makes the computational cost of computing the bending and twist cheap whilst also having good accuracy. 
+\\
+The code starts by creating a grid of nodes evenly spaced along the beam. The number of nodes is defined by the number of elements. A location matrix is then set up to define the global node numbers to define each element. In other words, the nodes defining each element 1 will be stored in column 1 in the location matrix. An example of the location matrix  is shown in matrix \ref{eq:location matrix}
+\begin{equation}
+LM = 
+ \left[ \begin{array}{ccccccc}
+ 	\centering
+0 &1 &2 &3& 4& 5& 6\\
+	1& 2& 3& 4& 5& 6& 7 
+\end{array}\right]
+\label{eq:location matrix}
+\end{equation}
+
+The integration points on each element are then defined. The integration will be an Gaussian quadrature. Therefore, for ease of calculation the weighting will be set to 1 hence the integration points chosen are $\pm \sqrt{\frac{1}{3}}$. For more on Gaussian quadrature see Appendix B.
+\
+So for each element and each integration point of each element the value of the shape functions described in equations \ref{eq:shape functions} are computed. The shape function derivatives are with respect to local coordinates so therefore must be converted to global coordinates this is done using the chain rule.\
+The stiffness matrix contributions due to bending are computed 1st with the global stiffness matrix and global force vector being populated appropriately as consistent with equation \ref{eq:shape func governing equ}. \
+Note that np.meshgrid is being used here. This is to ensure that the correct elements of the stiffness matrix are being populated. np.meshgrid creates matrix from the two arrays it is given. This matrix allows a every combination of element pairs in the row and columns. It is therefore used in the stiffness matrix population to populate every element in the matrix which corresponds to the bending and twist of the finite element.
+\\
+The shear contribution is then added to the global stiffness matrix. This process is repeated for every element over the entire beam.
+\ The boundary conditions are then enforced. For this case the propeller blade is treated as a cantilever beam. This means that the bending and rotation at base are strictly zero. This boundary condition is set and the system of equations $\vec{u} = \vec{F}[K]^{-1}$ is solved to give the bending and twist along the beam.
+
+\section{Interface between blade element momentum theory and finite element analysis}
+
+
+\chapter{Results and Discussion}
+\label{ch:Results and Discussion}
+
+\end{document}          

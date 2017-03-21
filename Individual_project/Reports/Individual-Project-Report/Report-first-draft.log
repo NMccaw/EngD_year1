@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.24)  20 MAR 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.24)  21 MAR 2017 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -56,35 +56,154 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count91
+\calc@Cskip=\skip45
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen107
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks16
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks17
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks18
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count104
+\l_MT_multwidth_dim=\dimen116
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen117
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen118
+\l_MT_above_intertext_sep=\dimen119
+\l_MT_below_intertext_sep=\dimen120
+\l_MT_above_shortintertext_sep=\dimen121
+\l_MT_below_shortintertext_sep=\dimen122
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count105
+\lst@gtempboxa=\box28
+\lst@token=\toks20
+\lst@length=\count106
+\lst@currlwidth=\dimen123
+\lst@column=\count107
+\lst@pos=\count108
+\lst@lostspace=\dimen124
+\lst@width=\dimen125
+\lst@newlines=\count109
+\lst@lineno=\count110
+\lst@maxwidth=\dimen126
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count111
+\lst@skipnumbers=\count112
+\lst@framebox=\box29
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
 (./Report-first-draft.aux)
 \openout1 = `Report-first-draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
-\scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count92
-\MPscratchDim=\dimen106
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count113
+\scratchdimen=\dimen127
+\scratchbox=\box30
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen128
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -132,12 +251,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
+\c@lstlisting=\count119
 
 [1
 
@@ -145,7 +259,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
@@ -156,16 +270,12 @@ Chapter 2.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 67.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 67.
 
-Overfull \hbox (3.05612pt too wide) in paragraph at lines 64--70
+Overfull \hbox (3.05612pt too wide) in paragraph at lines 65--71
 []\OT1/cmr/m/n/10 This sub-section will de-scribe the tu-to-ri-als un-der-taken
  us-ing Open-FOAM.The
  []
@@ -174,34 +284,34 @@ Overfull \hbox (3.05612pt too wide) in paragraph at lines 64--70
 File: cavity_pressure.png Graphic file (type png)
 
 <use cavity_pressure.png>
-Package pdftex.def Info: cavity_pressure.png used on input line 85.
+Package pdftex.def Info: cavity_pressure.png used on input line 86.
 (pdftex.def)             Requested size: 166.62209pt x 192.71953pt.
  [4 <./cavity_pressure.png>]
 <cavity_vector.png, id=31, 329.23pt x 376.40625pt>
 File: cavity_vector.png Graphic file (type png)
  <use cavity_vector.png>
-Package pdftex.def Info: cavity_vector.png used on input line 94.
+Package pdftex.def Info: cavity_vector.png used on input line 95.
 (pdftex.def)             Requested size: 164.6146pt x 188.20265pt.
 
 <cavity_fine.png, id=32, 494.84875pt x 424.58624pt>
 File: cavity_fine.png Graphic file (type png)
  <use cavity_fine.png>
-Package pdftex.def Info: cavity_fine.png used on input line 103.
+Package pdftex.def Info: cavity_fine.png used on input line 104.
 (pdftex.def)             Requested size: 192.99023pt x 165.58797pt.
 
 [5 <./cavity_vector.png> <./cavity_fine.png>]
 <Graded_mesh.png, id=39, 461.725pt x 392.46625pt>
 File: Graded_mesh.png Graphic file (type png)
  <use Graded_mesh.png>
-Package pdftex.def Info: Graded_mesh.png used on input line 120.
+Package pdftex.def Info: Graded_mesh.png used on input line 121.
 (pdftex.def)             Requested size: 230.86194pt x 196.23264pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
 
  []
 
 [6 <./Graded_mesh.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
@@ -209,26 +319,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
 File: stress_geometry.png Graphic file (type png)
 
 <use stress_geometry.png>
-Package pdftex.def Info: stress_geometry.png used on input line 143.
+Package pdftex.def Info: stress_geometry.png used on input line 144.
 (pdftex.def)             Requested size: 366.36786pt x 222.33008pt.
 
-Overfull \hbox (21.36786pt too wide) in paragraph at lines 143--144
+Overfull \hbox (21.36786pt too wide) in paragraph at lines 144--145
  [][] 
  []
 
 <stress_blocks.png, id=45, 584.1825pt x 537.00626pt>
 File: stress_blocks.png Graphic file (type png)
  <use stress_blocks.png>
-Package pdftex.def Info: stress_blocks.png used on input line 154.
+Package pdftex.def Info: stress_blocks.png used on input line 155.
 (pdftex.def)             Requested size: 172.5pt x 158.57115pt.
 
 <stress_mesh.png, id=46, 365.365pt x 345.29pt>
 File: stress_mesh.png Graphic file (type png)
  <use stress_mesh.png>
-Package pdftex.def Info: stress_mesh.png used on input line 160.
+Package pdftex.def Info: stress_mesh.png used on input line 161.
 (pdftex.def)             Requested size: 172.5pt x 163.02393pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 152--164
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 153--165
 []$[]$ $[]$ 
  []
 
@@ -238,7 +348,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <stress_field.png, id=47, 486.81876pt x 347.2975pt>
 File: stress_field.png Graphic file (type png)
  <use stress_field.png>
-Package pdftex.def Info: stress_field.png used on input line 174.
+Package pdftex.def Info: stress_field.png used on input line 175.
 (pdftex.def)             Requested size: 243.40878pt x 173.64832pt.
 
 [7 <./stress_geometry.png>]
@@ -246,7 +356,7 @@ Package pdftex.def Info: stress_field.png used on input line 174.
 File: stress_analytical.png Graphic file (type png)
 
 <use stress_analytical.png>
-Package pdftex.def Info: stress_analytical.png used on input line 186.
+Package pdftex.def Info: stress_analytical.png used on input line 187.
 (pdftex.def)             Requested size: 300.12051pt x 180.17268pt.
  [8 <./stress_blocks.png> <./stress_mesh.png>]
 [9 <./stress_field.png> <./stress_analytical.png>]
@@ -255,7 +365,7 @@ Chapter 3.
 File: Momentum_theory.png Graphic file (type png)
 
 <use Momentum_theory.png>
-Package pdftex.def Info: Momentum_theory.png used on input line 204.
+Package pdftex.def Info: Momentum_theory.png used on input line 205.
 (pdftex.def)             Requested size: 129.48341pt x 61.22859pt.
  [10
 
@@ -263,14 +373,14 @@ Package pdftex.def Info: Momentum_theory.png used on input line 204.
 <blade_element.png, id=69, 464.73625pt x 188.705pt>
 File: blade_element.png Graphic file (type png)
  <use blade_element.png>
-Package pdftex.def Info: blade_element.png used on input line 265.
+Package pdftex.def Info: blade_element.png used on input line 266.
 (pdftex.def)             Requested size: 232.36755pt x 94.35226pt.
 
 [11] <BEMT_flow_diagram.png, id=76, 494.84875pt x 638.385pt>
 File: BEMT_flow_diagram.png Graphic file (type png)
 
 <use BEMT_flow_diagram.png>
-Package pdftex.def Info: BEMT_flow_diagram.png used on input line 300.
+Package pdftex.def Info: BEMT_flow_diagram.png used on input line 301.
 (pdftex.def)             Requested size: 247.42377pt x 319.19171pt.
 
 
@@ -281,7 +391,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: curvature_correction_curves.png Graphic file (type png)
 
 <use curvature_correction_curves.png>
-Package pdftex.def Info: curvature_correction_curves.png used on input line 315
+Package pdftex.def Info: curvature_correction_curves.png used on input line 316
 .
 (pdftex.def)             Requested size: 255.45375pt x 183.68579pt.
 
@@ -292,43 +402,93 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <forces_on_beam.png, id=88, 240.9pt x 118.4425pt>
 File: forces_on_beam.png Graphic file (type png)
  <use forces_on_beam.png>
-Package pdftex.def Info: forces_on_beam.png used on input line 328.
+Package pdftex.def Info: forces_on_beam.png used on input line 329.
 (pdftex.def)             Requested size: 180.67455pt x 88.83165pt.
 
 [14 <./curvature_correction_curves.png> <./forces_on_beam.png>]
 <curvature.png, id=94, 177.66376pt x 166.6225pt>
 File: curvature.png Graphic file (type png)
  <use curvature.png>
-Package pdftex.def Info: curvature.png used on input line 378.
+Package pdftex.def Info: curvature.png used on input line 379.
 (pdftex.def)             Requested size: 88.83165pt x 83.31104pt.
- [15 <./curvature.png>] [16] (./Report-first-draft.aux) ) 
+ [15 <./curvature.png>] [16] [17]
+Chapter 4.
+
+Overfull \hbox (105.00458pt too wide) in paragraph at lines 479--480
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 483.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 483.
+
+Overfull \hbox (183.00537pt too wide) in paragraph at lines 483--484
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[18
+
+] <prop_data_file_example.png, id=112, 584.1825pt x 289.08pt>
+File: prop_data_file_example.png Graphic file (type png)
+
+<use prop_data_file_example.png>
+Package pdftex.def Info: prop_data_file_example.png used on input line 501.
+(pdftex.def)             Requested size: 292.09053pt x 144.53964pt.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 514.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 514.
+
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 519--520
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[19 <./prop_data_file_example.png>]
+Overfull \hbox (21.00372pt too wide) in paragraph at lines 534--535
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[20] [21]
+Chapter 5.
+[22
+
+] (./Report-first-draft.aux) ) 
 Here is how much of TeX's memory you used:
- 1624 strings out of 493014
- 24244 string characters out of 6133350
- 84282 words of memory out of 5000000
- 5161 multiletter control sequences out of 15000+600000
- 8808 words of font info for 31 fonts, out of 8000000 for 9000
+ 4237 strings out of 493014
+ 61807 string characters out of 6133350
+ 156775 words of memory out of 5000000
+ 7721 multiletter control sequences out of 15000+600000
+ 10282 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,23p,911b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Report-first-draft.pdf (18 pages, 897771 bytes).
+ 38i,7n,40p,911b,1486s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb>
+Output written on Report-first-draft.pdf (24 pages, 935354 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 174 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
