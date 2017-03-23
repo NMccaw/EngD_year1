@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.24)  21 MAR 2017 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.24)  23 MAR 2017 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -172,37 +172,49 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count113
+\FV@InFile=\read1
+\FV@TabBox=\box30
+\c@FancyVerbLine=\count114
+\FV@StepNumber=\count115
+\FV@OutFile=\write3
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (./Report-first-draft.aux)
 \openout1 = `Report-first-draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
+\scratchcounter=\count116
 \scratchdimen=\dimen127
-\scratchbox=\box30
-\nofMPsegments=\count114
-\nofMParguments=\count115
+\scratchbox=\box31
+\nofMPsegments=\count117
+\nofMParguments=\count118
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count116
+\MPscratchCnt=\count119
 \MPscratchDim=\dimen128
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
@@ -251,7 +263,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count119
+\c@lstlisting=\count122
 
 [1
 
@@ -259,7 +271,7 @@ e
 [1]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--23
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
@@ -270,12 +282,12 @@ Chapter 2.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
 
-Overfull \hbox (3.05612pt too wide) in paragraph at lines 65--71
+Overfull \hbox (3.05612pt too wide) in paragraph at lines 67--73
 []\OT1/cmr/m/n/10 This sub-section will de-scribe the tu-to-ri-als un-der-taken
  us-ing Open-FOAM.The
  []
@@ -284,34 +296,34 @@ Overfull \hbox (3.05612pt too wide) in paragraph at lines 65--71
 File: cavity_pressure.png Graphic file (type png)
 
 <use cavity_pressure.png>
-Package pdftex.def Info: cavity_pressure.png used on input line 86.
+Package pdftex.def Info: cavity_pressure.png used on input line 88.
 (pdftex.def)             Requested size: 166.62209pt x 192.71953pt.
  [4 <./cavity_pressure.png>]
 <cavity_vector.png, id=31, 329.23pt x 376.40625pt>
 File: cavity_vector.png Graphic file (type png)
  <use cavity_vector.png>
-Package pdftex.def Info: cavity_vector.png used on input line 95.
+Package pdftex.def Info: cavity_vector.png used on input line 97.
 (pdftex.def)             Requested size: 164.6146pt x 188.20265pt.
 
 <cavity_fine.png, id=32, 494.84875pt x 424.58624pt>
 File: cavity_fine.png Graphic file (type png)
  <use cavity_fine.png>
-Package pdftex.def Info: cavity_fine.png used on input line 104.
+Package pdftex.def Info: cavity_fine.png used on input line 106.
 (pdftex.def)             Requested size: 192.99023pt x 165.58797pt.
 
 [5 <./cavity_vector.png> <./cavity_fine.png>]
 <Graded_mesh.png, id=39, 461.725pt x 392.46625pt>
 File: Graded_mesh.png Graphic file (type png)
  <use Graded_mesh.png>
-Package pdftex.def Info: Graded_mesh.png used on input line 121.
+Package pdftex.def Info: Graded_mesh.png used on input line 123.
 (pdftex.def)             Requested size: 230.86194pt x 196.23264pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
+Underfull \hbox (badness 10000) in paragraph at lines 134--139
 
  []
 
 [6 <./Graded_mesh.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
@@ -319,26 +331,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
 File: stress_geometry.png Graphic file (type png)
 
 <use stress_geometry.png>
-Package pdftex.def Info: stress_geometry.png used on input line 144.
+Package pdftex.def Info: stress_geometry.png used on input line 146.
 (pdftex.def)             Requested size: 366.36786pt x 222.33008pt.
 
-Overfull \hbox (21.36786pt too wide) in paragraph at lines 144--145
+Overfull \hbox (21.36786pt too wide) in paragraph at lines 146--147
  [][] 
  []
 
 <stress_blocks.png, id=45, 584.1825pt x 537.00626pt>
 File: stress_blocks.png Graphic file (type png)
  <use stress_blocks.png>
-Package pdftex.def Info: stress_blocks.png used on input line 155.
+Package pdftex.def Info: stress_blocks.png used on input line 157.
 (pdftex.def)             Requested size: 172.5pt x 158.57115pt.
 
 <stress_mesh.png, id=46, 365.365pt x 345.29pt>
 File: stress_mesh.png Graphic file (type png)
  <use stress_mesh.png>
-Package pdftex.def Info: stress_mesh.png used on input line 161.
+Package pdftex.def Info: stress_mesh.png used on input line 163.
 (pdftex.def)             Requested size: 172.5pt x 163.02393pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 153--165
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 155--167
 []$[]$ $[]$ 
  []
 
@@ -348,7 +360,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <stress_field.png, id=47, 486.81876pt x 347.2975pt>
 File: stress_field.png Graphic file (type png)
  <use stress_field.png>
-Package pdftex.def Info: stress_field.png used on input line 175.
+Package pdftex.def Info: stress_field.png used on input line 177.
 (pdftex.def)             Requested size: 243.40878pt x 173.64832pt.
 
 [7 <./stress_geometry.png>]
@@ -356,7 +368,7 @@ Package pdftex.def Info: stress_field.png used on input line 175.
 File: stress_analytical.png Graphic file (type png)
 
 <use stress_analytical.png>
-Package pdftex.def Info: stress_analytical.png used on input line 187.
+Package pdftex.def Info: stress_analytical.png used on input line 189.
 (pdftex.def)             Requested size: 300.12051pt x 180.17268pt.
  [8 <./stress_blocks.png> <./stress_mesh.png>]
 [9 <./stress_field.png> <./stress_analytical.png>]
@@ -365,7 +377,7 @@ Chapter 3.
 File: Momentum_theory.png Graphic file (type png)
 
 <use Momentum_theory.png>
-Package pdftex.def Info: Momentum_theory.png used on input line 205.
+Package pdftex.def Info: Momentum_theory.png used on input line 207.
 (pdftex.def)             Requested size: 129.48341pt x 61.22859pt.
  [10
 
@@ -373,14 +385,14 @@ Package pdftex.def Info: Momentum_theory.png used on input line 205.
 <blade_element.png, id=69, 464.73625pt x 188.705pt>
 File: blade_element.png Graphic file (type png)
  <use blade_element.png>
-Package pdftex.def Info: blade_element.png used on input line 266.
+Package pdftex.def Info: blade_element.png used on input line 268.
 (pdftex.def)             Requested size: 232.36755pt x 94.35226pt.
 
 [11] <BEMT_flow_diagram.png, id=76, 494.84875pt x 638.385pt>
 File: BEMT_flow_diagram.png Graphic file (type png)
 
 <use BEMT_flow_diagram.png>
-Package pdftex.def Info: BEMT_flow_diagram.png used on input line 301.
+Package pdftex.def Info: BEMT_flow_diagram.png used on input line 303.
 (pdftex.def)             Requested size: 247.42377pt x 319.19171pt.
 
 
@@ -391,7 +403,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: curvature_correction_curves.png Graphic file (type png)
 
 <use curvature_correction_curves.png>
-Package pdftex.def Info: curvature_correction_curves.png used on input line 316
+Package pdftex.def Info: curvature_correction_curves.png used on input line 318
 .
 (pdftex.def)             Requested size: 255.45375pt x 183.68579pt.
 
@@ -402,31 +414,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <forces_on_beam.png, id=88, 240.9pt x 118.4425pt>
 File: forces_on_beam.png Graphic file (type png)
  <use forces_on_beam.png>
-Package pdftex.def Info: forces_on_beam.png used on input line 329.
+Package pdftex.def Info: forces_on_beam.png used on input line 331.
 (pdftex.def)             Requested size: 180.67455pt x 88.83165pt.
 
 [14 <./curvature_correction_curves.png> <./forces_on_beam.png>]
 <curvature.png, id=94, 177.66376pt x 166.6225pt>
 File: curvature.png Graphic file (type png)
  <use curvature.png>
-Package pdftex.def Info: curvature.png used on input line 379.
+Package pdftex.def Info: curvature.png used on input line 381.
 (pdftex.def)             Requested size: 88.83165pt x 83.31104pt.
  [15 <./curvature.png>] [16] [17]
 Chapter 4.
 
-Overfull \hbox (105.00458pt too wide) in paragraph at lines 479--480
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 482--483
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 483.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 486.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 483.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 486.
 
-Overfull \hbox (183.00537pt too wide) in paragraph at lines 483--484
+Overfull \hbox (147.005pt too wide) in paragraph at lines 486--487
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -436,59 +448,99 @@ Overfull \hbox (183.00537pt too wide) in paragraph at lines 483--484
 File: prop_data_file_example.png Graphic file (type png)
 
 <use prop_data_file_example.png>
-Package pdftex.def Info: prop_data_file_example.png used on input line 501.
+Package pdftex.def Info: prop_data_file_example.png used on input line 504.
 (pdftex.def)             Requested size: 292.09053pt x 144.53964pt.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 514.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 517.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 514.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 517.
 
-Overfull \hbox (39.0039pt too wide) in paragraph at lines 519--520
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 522--523
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[19 <./prop_data_file_example.png>]
-Overfull \hbox (21.00372pt too wide) in paragraph at lines 534--535
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
+[19 <./prop_data_file_example.png>] [20] [21]
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 589--590
+[][][][][][][][][][][][][][][] 
  []
 
-[20] [21]
+
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 605--606
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 608--609
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[22]
 Chapter 5.
-[22
 
-] (./Report-first-draft.aux) ) 
+LaTeX Warning: Reference `tab: zero camber results' on page 23 undefined on inp
+ut line 640.
+
+[23
+
+] <thrust_position.pdf, id=130, 433.62pt x 289.08pt>
+File: thrust_position.pdf Graphic file (type pdf)
+
+<use thrust_position.pdf>
+Package pdftex.def Info: thrust_position.pdf used on input line 658.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+<displacement_zero_camber.pdf, id=131, 433.62pt x 289.08pt>
+File: displacement_zero_camber.pdf Graphic file (type pdf)
+
+<use displacement_zero_camber.pdf>
+Package pdftex.def Info: displacement_zero_camber.pdf used on input line 667.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+<timo_test.pdf, id=132, 433.62pt x 289.08pt>
+File: timo_test.pdf Graphic file (type pdf)
+ <use timo_test.pdf>
+Package pdftex.def Info: timo_test.pdf used on input line 674.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+ [24 <./thrust_position.pdf> <./displacement_zero_camber.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./displacement_zero_camber.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+>] [25 <./timo_test.pdf>] (./Report-first-draft.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4237 strings out of 493014
- 61807 string characters out of 6133350
- 156775 words of memory out of 5000000
- 7721 multiletter control sequences out of 15000+600000
+ 4633 strings out of 493014
+ 68150 string characters out of 6133350
+ 166226 words of memory out of 5000000
+ 8110 multiletter control sequences out of 15000+600000
  10282 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,40p,911b,1486s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
-pfb>
-Output written on Report-first-draft.pdf (24 pages, 935354 bytes).
+ 38i,8n,40p,911b,1487s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Report-first-draft.pdf (27 pages, 985014 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 285 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

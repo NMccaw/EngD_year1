@@ -2,7 +2,9 @@
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{listings}
-\lstset{language = Python, numbers = left, stepnumber = 1}
+\usepackage{fancyvrb}
+\fvset{tabsize=2}
+\lstset{language = Python, numbers = left, stepnumber = 1,literate={\ \ }{{\ }}1,tabsize =2}
 % Title Page
 \title{Using Blade Element Momentum Theory for Propeller Analysis}
 \author{Nicholas McCaw}
@@ -461,6 +463,7 @@ This generates the local stiffness matrix and force vector. The local values mus
 Equation \ref{eq:shape func governing equ} is now in a form which is solvable via $\vec{u} = \vec{F} [K]^{-1} $. This is done by the code described in section (CODE SECTION HERE)
 
 \chapter{The Code}
+\label{ch:code}
 This chapter will describe the code used for the blade element momentum theory and finite element analysis. Furthermore the chapter will describe how the BEMT and FEA are coupled. Full code can be found in appendix (INSERT APPENDIX REF)
 
 \section{Blade Element momentum theory code}
@@ -569,9 +572,110 @@ The shear contribution is then added to the global stiffness matrix. This proces
 \ The boundary conditions are then enforced. For this case the propeller blade is treated as a cantilever beam. This means that the bending and rotation at base are strictly zero. This boundary condition is set and the system of equations $\vec{u} = \vec{F}[K]^{-1}$ is solved to give the bending and twist along the beam.
 
 \section{Interface between blade element momentum theory and finite element analysis}
+There is now a function which returns the thrust and torque, and another function which computes the bending and twist of a beam for a given load. It is desirable to combine the two pieces of code. This section describes how the two codes are combined.
 
+The blade element momentum theory code returns the thrust,torque, flow speed at each element and the lift coefficient. The lift force can then be computed by the formula \ref{eq:lift equation}
+
+\begin{equation}
+ L = \frac{1}{2} \rho U^2 S C_L
+ \label{eq:lift equation}
+\end{equation} 
+
+Where $\rho$ is the fluid density, $U$ is the flow speed, $S$ is the surface area and $C_L$ is the lift coefficient. The lift force can then be calculated for each element. This is the force which acts perpendicular to the blade as shown in figure \ref{fig:blade_element} so will be used as the load on the Timoshenko beam. 
+\
+The main difficulty of combining the blade elements to the finite elements is mapping the loads to the correct elements. The code has been written such that the number of finite elements is independent to the number of blade elements. This therefore requires additional code to map the blade element loads to the finite elements. This code is shown below.
+
+\begin{lstlisting}
+def BEMT_FEA_mesh_interp(N_elements_FEA,N_elements_BEMT,Cl,L):
+	LM_BEMT = np.zeros((2,N_elements_BEMT))
+	LM_FEA = np.zeros((2,N_elements_FEA))
+	for e in range(N_elements_BEMT):
+		LM_BEMT[0,e] = e*L/N_elements_BEMT
+		LM_BEMT[1,e] = (e+1)*L/N_elements_BEMT
+	
+	for e in range(N_elements_FEA):
+		LM_FEA[0,e] = e*L/N_elements_FEA
+		LM_FEA[1,e] = (e+1)*L/N_elements_FEA
+	
+	q = np.zeros(N_elements_FEA)
+	residual = 0
+	for j in range(N_elements_FEA):   
+		k = j 
+		for i in range(N_elements_BEMT):
+			if LM_FEA[0,k] >= LM_BEMT[0,i] and LM_FEA[1,k] <= LM_BEMT[1,i]:
+				q[k] = Cl[i]
+				k+=1
+			elif LM_FEA[0,k] < LM_BEMT[1,i] and LM_FEA[1,k] > LM_BEMT[1,i]:
+				residual = abs(LM_FEA[1,j] - LM_BEMT[1,i])
+				q[k] = residual*Cl[i] + (1-residual)*Cl[i+1]
+				k+=1
+	return q
+\end{lstlisting}
+
+From the code above two location matrices are created, one for the blade element momentum theory the other for the finite element analysis. These location matrices are created to define the positions of each node pairs in terms of their global positions on the beam. From line 14 the force is distributed along the finite elements. Line 17 states that if the finite element is within a blade element then set the load on the element equal to the lift force. Line 20-22 states that if the finite element is between two blade elements then the load on the finite element is a combination of the two blade element lift forces and is dependent on how much the finite element breeches the next blade element. This creates a load distribution which is generic for any number of blade elements or finite elements.
 
 \chapter{Results and Discussion}
 \label{ch:Results and Discussion}
+This section will discuss the results obtained using the code described in chapter \ref{ch:code}. Two test cases have been performed so far. A zero camber case and a  case with camber. From the preliminary investigation the zero camber case works well. However some aspects of the cambered case are wrong.
+
+\section{Zero camber case}
+
+The zero camber case propeller data file is shown in figure \ref{fig:prop dat file}. This is data used on FORTRAN code so can be used for verification. The initial settings are shown in table \ref{tab:zero camber test case}.
+
+\begin{table}[htb]
+	
+	\label{tab:zero camber test case}
+	\centering
+	\begin{tabular}{c|l}
+		Condition & Value  \\ 	
+		\hline
+		Advance Ratio $J$ & 0.8 \\
+		Blade Area ratio & 0.4 \\
+		Number of Blades & 4 \\
+		Pitch Diameter ratio & 0.95 \\
+	\end{tabular}
+\caption{Conditions for zero camber test case.}
+\end{table}
+
+The results of the blade element momentum theory are shown in table \ref{tab: zero camber results}. These results match reasonably closely with the results from the FORTRAN code. The difference being the use of a look up table in the code used here as opposed to the analytical approximation used in the FORTRAN code.
+\begin{table}[htb]
+	\label{tab:zero camber results}
+	\centering
+	\begin{tabular}{c|l|l}
+		 & Python & FORTRAN \\ 	
+		\hline
+		Thrust Coefficient  & 0.108 & 0.113 \\
+		Torque Coefficient & 0.018 & 0.019 \\
+		Open water efficiency & 0.737 & 0.746\\
+	\end{tabular}
+	\caption{Verification of test case using Python and FORTRAN}
+\end{table}
+
+Furthermore if the thrust coefficient is plotted against the radial position it can be seen from figure \ref{fig:thrust_position} that the thrust coefficient against radial position is similar to the expected curve shown in figure 15.9 in (TURNOCK) 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{thrust_position.pdf}
+	\caption{Thrust coefficient against radial position for the zero camber test case}
+	\label{fig:thrust_position}
+\end{figure}
+
+This gives a good indicator that the code works well. Given the blade element momentum theory results the finite element analysis is performed. It can be seen from figure \ref{fig:displacement zero camber} that the blade deforms slightly with a maximum deflection at the tip of less than 5mm. 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{displacement_zero_camber.pdf}
+	\caption{Displacement of blade due to loading from lift.}
+	\label{fig:displacement zero camber}
+\end{figure}
+These results seem reasonable however the finite element code must be verified. This is done using another finite element code (BROWN UNI). The verification beam is modelled as a cantilever of length 10m with a uniformly distributed load of 1000N. The distribution deformation matches closely to the expected value as shown in figure \ref{fig:deformation test}
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.5]{timo_test.pdf}
+	\caption{Displacement of test beam due to known loading.}
+	\label{fig:deformation test}
+\end{figure}
+
+The maximum deformation occurs at element 1000. The deformation is -0.39 m. We can therefore have some confidence that the FEA code gives correct results.
 
 \end{document}          
